@@ -3,23 +3,9 @@ using UnityEngine;
 
 public class Ejercicio04 : MonoBehaviour
 {
-    string FindEnemy(string[] enemys)
+    string[] FindEnemys(string[] enemys)
     {
-        for (int i = 0; i < enemys.Length; i++)
-        {
-            if (enemys[i].Equals("Araña"))
-            {
-                return "Araña";
-            }
-            if (enemys[i].Equals("Lobo"))
-            {
-                return "Lobo";
-            }
-            if (enemys[i].Equals("Orco"))
-            {
-                return "Orco";
-            }
-        }
+        if (enemys != null) return enemys;
         return String.Empty;
     }
 }
