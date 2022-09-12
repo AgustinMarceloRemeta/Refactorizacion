@@ -1,11 +1,26 @@
-using System;
+using System.Linq;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Ejercicio04 : MonoBehaviour
 {
-    string[] FindEnemys(string[] enemys)
+    
+    public List<string>;
+    string enemigo;
+
+    private void Start()
     {
-        if (enemys != null) return enemys;
-        return null;
+        enemigos = new List<string>() { "Orco", "Araña", "Golem", "Goblin" };
+        enemigo = "Araña"
+    }
+
+    string EncontrandoEnemigo()
+    {
+        IEnumerable<string> nuevoenemigo = from variable in enemigos
+                                           where variable == enemigo
+                                           select variable;
+
+        if (nuevoenemigo.Contains(enemigo)) return "Se encontro araña";
+        else return "No se encontró";
     }
 }

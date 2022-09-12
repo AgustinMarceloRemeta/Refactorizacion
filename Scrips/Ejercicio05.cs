@@ -2,19 +2,25 @@ using UnityEngine;
 
 public class Ejercicio05 : MonoBehaviour
 {
-    [Range(1, 20)]
-    public int criticalChance;
-    public int MaxDie;
+    string acción;
+    int habilidad;
 
-    public void CriticalDamage()
+    void Start()
     {
-        int die = Random.Range(0, criticalChance);
+        acción = "Attack"
+        habilidad = 1
+    }
 
-        if (die < MaxDie)
-        {
-            Debug.Log("Normal Attack")
-            return
-        }
-        Debug.Log("Critical Hit");
+    void EjecutarAcción()
+    {
+     if (acción == "Heal" && habilidad == 1)
+                  Debug.Log("Me curé");
+         
+     else  if (acción == "Attack" && habilidad == 2)
+                  Debug.Log("Hago daño");
+           
+     else if (acción == "Special Attack" && habilidad == 3)
+                  Debug.Log("Empiezo a girar como trompo");
     }
 }
+
