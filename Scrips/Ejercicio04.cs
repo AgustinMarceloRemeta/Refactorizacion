@@ -5,7 +5,7 @@ using UnityEngine;
 public class Ejercicio04 : MonoBehaviour
 {
     
-    public List<string>;
+    public List<string> enemigos;
     string enemigo;
 
     private void Start()
